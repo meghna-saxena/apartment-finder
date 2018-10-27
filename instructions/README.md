@@ -17,3 +17,6 @@ Apartment Finder is a simple react application that fetches the information to G
 - Due to limited time contraints, UI can be built much better.
 - A searchbar component for fetching the information directly by the user.
 - Using Google maps locator to fetch the houses.
+
+
+![alt tag](img/apartment-finder.jpg)
