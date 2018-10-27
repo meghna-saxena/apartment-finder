@@ -1,0 +1,12 @@
+.target-home {
+  margin: 0 auto;
+  display: flex;
+  background-color:#34495e;
+  color: #fff;
+  width: 50%;
+  margin-top: 50px;
+}
+
+.apartmentList-table {
+ border: 1px solid #000;
+}

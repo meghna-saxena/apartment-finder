@@ -1,0 +1,17 @@
+.my-container {
+    margin-top: 50px;
+     position: flex;
+     margin-left: 70px;
+}
+
+.apartment {
+  display: block;
+}
+
+.apartment-table {
+  margin-left: 35px;
+}
+
+td {
+  vertical-align: top;
+}
