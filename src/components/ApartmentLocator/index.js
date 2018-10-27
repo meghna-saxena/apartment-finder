@@ -43,19 +43,20 @@ class ApartmentLocator extends Component {
     const targetHome = this.getTargetHome(apartments);
 
     return (
-      <div className="my-container">
-
+      <div className="container">
+       <div className="target-home">
+          <div className="target-home-body"><h4>Target Home: </h4>
+          {<Apartment detail={targetHome} />}
+          </div>
+        </div>
         <table>
           <tr>
-            <td><ApartmentsList id={0} title="By Distance" apartments={apartmentsByDistance} /></td>
-            <td><ApartmentsList id={1} title="By Rooms" apartments={apartmentsByRooms} /></td>
-            <td><ApartmentsList id={2} title="By Alphabetical" apartments={apartmentsByStreetName} /></td>
+            <td><ApartmentsList id={0} className="apartments-list" title="Sorted by Distance" apartments={apartmentsByDistance} /></td>
+            <td><ApartmentsList id={1} title="Sorted by Rooms" apartments={apartmentsByRooms} /></td>
+            <td><ApartmentsList id={2} title="Missing Information" apartments={apartmentsByStreetName} /></td>
           </tr>
         </table>
-        <div className="target-home">
-          <h5>Target Home: </h5>
-          {<Apartment detail={targetHome} />}
-        </div>
+       
       </div>
 
     );

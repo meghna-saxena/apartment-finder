@@ -12,7 +12,7 @@ const Apartment = ({ detail }) => {
       <table className="apartment-table">
         <tr>
           <td>
-            <img src={image} alt="homeIcon" />
+            <img src={image} className="img" alt="homeIcon" />
           </td>
           <td>
             <tr><td>

@@ -1,12 +1,24 @@
+.container {
+   display: flex;
+   margin-top: 30px;
+}
+
 .target-home {
-  margin: 0 auto;
-  display: flex;
   background-color:#34495e;
   color: #fff;
   width: 50%;
-  margin-top: 50px;
+  height: 300px;
+  text-align: center  
 }
 
-.apartmentList-table {
- border: 1px solid #000;
+.target-home-body {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  transform: translate(-30%, -30%);
+  text-align: center;
+}
+
+.target-home-body h4 {
+  color: rgb(187, 172, 172);
 }
