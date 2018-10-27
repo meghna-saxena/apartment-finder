@@ -14,17 +14,17 @@ const Apartment = ({ detail }) => {
           <td>
             <img src={image} className="img" alt="homeIcon" />
           </td>
-          <td>
-            <tr><td>
+          <tbody>
+            <td>
               <h5>{detail.street}</h5>
-            </td></tr>
+            </td>
             <tr><td>Price: {value}</td></tr>
             <tr><td>Rooms: {rooms}</td></tr>
-          </td>
+          </tbody>
         </tr>
       </table>
     </div>
-  )
-};
-
+      )
+    };
+    
 export default Apartment;

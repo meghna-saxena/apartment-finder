@@ -7,7 +7,7 @@ const findDistance = (first, second) => {
 }
 
 export const getApartmentsByDistance = (apartments, sisterStreet) => {
-  const sisterApartment = apartments.find( (i) => {
+  const sisterApartment = apartments.find((i) => {
     return sisterStreet === i.street;
   })
 
@@ -17,11 +17,20 @@ export const getApartmentsByDistance = (apartments, sisterStreet) => {
   return apartments.sort(distanceSorter);
 }
 
-
 export const getApartmentsByRooms = (apartments, rooms) => {
   return apartments.filter(i => parseInt(_.get(i, "params.rooms", 0)) >= rooms);
 }
 
 export const getApartmentsByStreetName = (apartments) => {
-  return apartments.sort((a, b) => a.street > b.street);
+  const filteredApartments = apartments.filter(item => {
+    if (item.params) {
+      return item.params.rooms === undefined || item.params.value === undefined
+    } else {
+      return item;
+    }
+  });
+
+  return filteredApartments.sort((a, b) => a.street > b.street);
 }
+
+

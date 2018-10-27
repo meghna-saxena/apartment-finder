@@ -51,14 +51,12 @@ class ApartmentLocator extends Component {
         </div>
         <table>
           <tr>
-            <td><ApartmentsList id={0} className="apartments-list" title="Sorted by Distance" apartments={apartmentsByDistance} /></td>
-            <td><ApartmentsList id={1} title="Sorted by Rooms" apartments={apartmentsByRooms} /></td>
-            <td><ApartmentsList id={2} title="Missing Information" apartments={apartmentsByStreetName} /></td>
+            <td><ApartmentsList key={10} className="apartments-list" title="Sorted by Distance" apartments={apartmentsByDistance} /></td>
+            <td><ApartmentsList key={11} title="Sorted by Rooms" apartments={apartmentsByRooms} /></td>
+            <td><ApartmentsList key={12} title="Missing Information" apartments={apartmentsByStreetName} /></td>
           </tr>
         </table>
-       
       </div>
-
     );
   }
 }
