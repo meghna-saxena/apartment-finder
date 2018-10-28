@@ -9,22 +9,17 @@ const Apartment = ({ detail }) => {
   const value = _.get(detail, "params.value");
   return (
     <div className="apartment">
-      <table className="apartment-table">
-        <tr>
-          <td>
-            <img src={image} className="img" alt="homeIcon" />
-          </td>
-          <tbody>
-            <td>
-              <h5>{detail.street}</h5>
-            </td>
-            <tr><td>Price: {value}</td></tr>
-            <tr><td>Rooms: {rooms}</td></tr>
-          </tbody>
-        </tr>
-      </table>
+      <div className="apartment-table">
+        <div>
+          <img src={image} className="img" alt="homeIcon" />
+          <h5>{detail.street}</h5>
+        </div>
+        <div>Price: {value}</div>
+        <div>Rooms: {rooms}</div>
+      </div>
     </div>
-      )
-    };
-    
+
+  )
+};
+
 export default Apartment;

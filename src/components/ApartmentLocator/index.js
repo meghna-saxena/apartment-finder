@@ -44,17 +44,25 @@ class ApartmentLocator extends Component {
 
     return (
       <div className="container">
-       <div className="target-home">
+        <div className="target-home">
           <div className="target-home-body"><h4>Target Home: </h4>
-          {<Apartment detail={targetHome} />}
+            {<Apartment detail={targetHome} />}
           </div>
         </div>
         <table>
-          <tr>
-            <td><ApartmentsList key={10} className="apartments-list" title="Sorted by Distance" apartments={apartmentsByDistance} /></td>
-            <td><ApartmentsList key={11} title="Sorted by Rooms" apartments={apartmentsByRooms} /></td>
-            <td><ApartmentsList key={12} title="Missing Information" apartments={apartmentsByStreetName} /></td>
-          </tr>
+          <tbody>
+            <tr>
+              <td>
+                <ApartmentsList title="Sorted by Distance" apartments={apartmentsByDistance} />
+              </td>
+              <td>
+                <ApartmentsList title="Sorted by Rooms" apartments={apartmentsByRooms} />
+              </td>
+              <td>
+                <ApartmentsList title="Missing Information" apartments={apartmentsByStreetName} />
+              </td>
+            </tr>
+          </tbody>
         </table>
       </div>
     );
