@@ -7,16 +7,16 @@ class ApartmentsList extends Component {
   render() {
     const { apartments } = this.props;
 
-    const houses = apartments.map(item => <tr><td><Apartment detail={item} /></td></tr>)
+    const houses = apartments.map(item => <Apartment key={item.street} detail={item} />)
 
     return (
       <div>
-        <table className="apartment-list-table">
-          <th className="apartments-list-heading">{this.props.title}</th>
-          <tbody>
+        <div className="apartment-list-table">
+          <div className="apartments-list-heading">{this.props.title}</div>
+          <div>
             {houses}
-          </tbody>
-        </table>
+          </div>
+        </div>
       </div>
     );
   }
