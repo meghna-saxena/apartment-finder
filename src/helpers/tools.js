@@ -18,13 +18,17 @@ export const getApartmentsByDistance = (apartments, sisterStreet) => {
 }
 
 export const getApartmentsByRooms = (apartments, rooms) => {
-  return apartments.filter(i => parseInt(_.get(i, "params.rooms", 0)) >= rooms);
+  const filteredApartments = apartments.filter(i => parseInt(_.get(i, "params.rooms", 0)) >= rooms);
+
+  filteredApartments.sort((a, b) => a.params.rooms - b.params.rooms);
+
+  return filteredApartments;
 }
 
 export const getApartmentsByStreetName = (apartments) => {
   const filteredApartments = apartments.filter(item => {
     if (item.params) {
-      return item.params.rooms === undefined || item.params.value === undefined
+      return (!item.params.rooms || !item.params.value)
     } else {
       return item;
     }
